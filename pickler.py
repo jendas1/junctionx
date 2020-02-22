@@ -4,7 +4,7 @@ import pickle
 
 
 def load_all() -> dict:
-    with open("pickles.pkl", 'ab') as fp:
+    with open("pickles.pkl", 'rb+') as fp:
         try:
             return pickle.load(fp)
         except Exception as e:
@@ -12,7 +12,7 @@ def load_all() -> dict:
 
 
 def save_all(data: dict):
-    with open("pickles.pkl", 'ab') as fp:
+    with open("pickles.pkl", 'wb+') as fp:
         pickle.dump(data, fp)
 
 
