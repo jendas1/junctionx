@@ -1,19 +1,19 @@
 import datetime
 
-import pickler
+import pickle
 
 
 def load_all() -> dict:
-    with open("pickles.pkl", 'a') as fp:
+    with open("pickles.pkl", 'ab') as fp:
         try:
-            return pickler.load(fp)
+            return pickle.load(fp)
         except Exception as e:
             return {}
 
 
 def save_all(data: dict):
-    with open("pickles.pkl", 'a') as fp:
-        pickler.dump(data, fp)
+    with open("pickles.pkl", 'ab') as fp:
+        pickle.dump(data, fp)
 
 
 def get_full_user_data(user_id):

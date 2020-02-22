@@ -13,11 +13,11 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 questions = [
     '',
-    ('How do you feel right now?', ["good", "bad", "ok"]),
-    ('Have you helped anyone today? How?', None),
-    ('What are you grateful for?', None),
-    ("How is your mood today?", [])
+    'How do you feel right now?',
+    'Have you helped anyone today? How?',
+    'What are you grateful for?'
 ]
+
 
 is_in_mood = set()
 
